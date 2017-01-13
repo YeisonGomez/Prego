@@ -1,0 +1,48 @@
+<!--Copyright (c) <2016> <Yeison Gomez Rodriguez, Brayan Stiven Tovar Claros>-->
+<ion-side-menus enable-menu-with-back-views="true" class="indigo-300">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="color-white button button-icon button-clear ion-navicon" menu-toggle="left" ng-if="isWall()">
+                </button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <button class="color-white button button-icon button-clear ion-android-more-vertical" menu-toggle="right" ng-if="!isWall()">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <!--=================================MENU IZQUIERDO===============================-->
+    <div ng-include src="'templates/main/view_menu_left.html'"></div>
+    <!--=================================MENU DERECHO================================-->
+    <div ng-include src="'templates/main/view_menu_rigth.html'"></div>
+</ion-side-menus>
+<!--=====================Modales======================-->
+<!--modal config-->
+<script id="modalConfig" type="text/ng-template">
+    <ion-modal-view class="fix-modal modal-border-round">
+        <ion-header-bar>
+            <h1 class="title text-center">Acerca de</h1>
+        </ion-header-bar>
+        <ion-content>
+            <div class="list">
+                <img class="img-name" src="img/name.png">
+                <div class="text-center">Concurso departamental de aplicaciones móviles
+                    <br> “apps para la construcción de paz”</div>
+                <br>
+                <div class="item item-divider">
+                    Desarrollo
+                </div>
+                <ion-item class="item">Yeison Gomez Rodriguez
+                    <br>Brayan Stiven Tovar Claros</ion-item>
+                <br>
+                <div class="item item-divider text-center">
+                    2016
+                </div>
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>

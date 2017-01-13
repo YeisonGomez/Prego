@@ -1,0 +1,631 @@
+/*Copyright (c) <2016> <Yeison Gomez Rodriguez, Brayan Stiven Tovar Claros>*/
+/*====================Images and icons=================*/
+
+.style-logo-ua {
+    position: absolute;
+    width: 100px;
+    bottom: 50px;
+    left: 30%;
+}
+
+.style-text-ua {
+    position: absolute;
+    bottom: 5px;
+    font-size: small;
+}
+.img-name{
+    width: 100%;
+}
+
+/*==================buttons and inputs==================*/
+
+
+/*Menú derecho*/
+
+.fix-button-right {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    z-index: 50;
+}
+
+.width-90-pc {
+    width: 90%;
+}
+
+.margin-5-pc {
+    margin: 5%;
+}
+
+.top-30-pc {
+    margin-top: 30%;
+}
+
+.width-all {
+    width: 100%;
+}
+
+.width-150-px {
+    width: 150px;
+}
+
+.width-85-pc {
+    width: 85%;
+}
+
+.footer-slide-down {
+    bottom: 40px;
+}
+
+.display-table {
+    display: table-cell;
+}
+
+.height-subjects {
+    height: 70px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.height-subjects span {
+    top: 22px!important;
+}
+
+
+
+.input-advice {
+    opacity: 0;
+    bottom: 43px;
+    font-size: smaller;
+    height: 50px;
+    z-index: 5;
+    position: absolute;
+}
+
+.chat-input {
+    margin-bottom: 2px;
+}
+
+/*Boton modal*/
+
+.style-modal .popup {
+    border-radius: 8px 8px 8px 8px!important;
+}
+
+.style-modal .popup-head {
+    background-color: #3F51B5!important;
+    color: white!important;
+    border-radius: 8px 8px 0 0!important;
+}
+
+.style-modal h3,
+h5 {
+    color: white!important;
+}
+
+.style-modal .popup-buttons .button .ok-button {
+    background-color: red!important;
+}
+
+
+/*subjects reparar*/
+
+.fix-badge-subject a {
+    position: static!important;
+}
+
+
+/*borders*/
+
+.border-round {
+    border-radius: 50px 50px 50px 50px;
+    -moz-border-radius: 50px 50px 50px 50px;
+    -webkit-border-radius: 50px 50px 50px 50px;
+}
+
+.modal-border-round {
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+}
+
+.chat-border-round {
+    border-radius: 10px 10px 10px 10px!important;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.border-none {
+    border: none;
+}
+
+.border-top-none {
+    border-top: none;
+}
+
+.border-left-none {
+    border-left: none;
+}
+
+.fix-border-footer {
+    background-size: 0;
+}
+
+.table-margin {
+    border-spacing: 40px;
+    border-collapse: separate;
+}
+
+.border-promedio {
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+.divider {
+    border-bottom: 1px solid lightgray;
+}
+
+
+/*boton más input*/
+
+.more-button {
+    background: none;
+    border: none;
+    color: #1A237E;
+}
+
+
+/*==========================Texts=====================*/
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.font-size-200-pc {
+    font-size: 200%;
+}
+
+.circle {
+    position: absolute;
+    left: 7px;
+    top: 12px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    font-size: 18px;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: #FFa000;
+    font-weight: 900;
+}
+
+.circle-promedio {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 18px;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: #FFa000;
+    font-weight: 900;
+}
+
+.text-circle-subjects {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.text-promedio {
+    font-size: 14px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.padding-text-badge {
+    padding-right: 70px;
+}
+
+.text-trunc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-no-trunc {
+    overflow: inherit!important;
+    white-space: normal!important;
+}
+
+.cursive {
+    font-style: italic;
+}
+
+.font-size-large {
+    font-size: large;
+}
+
+.active-subject:active {
+    border-color: #ccc!important;
+    background-color: #D9D9D9!important;
+}
+
+.active-subject a{
+    border-color: transparent!important;
+    background-color: transparent!important;
+}
+
+/*========================Elements=====================*/
+
+
+/*Cerrar sesión*/
+
+.style-log-out a {
+    margin-top: 1px;
+    width: 90%;
+    border-radius: 0!important;
+}
+
+
+/*Notificacion*/
+
+.style-toast {
+    width: 80%;
+    left: 10%;
+    bottom: 50px;
+    padding: 5px 10px;
+    position: absolute;
+    background-color: rgba(000, 000, 000, 0.6);
+    z-index: 50;
+    font-size: smaller;
+}
+
+.toast-anim {
+    animation-name: toastIn;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+
+/*Loader*/
+
+.style-loader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(000, 000, 000, 0.5);
+    z-index: 5;
+}
+
+.style-loader img {
+    position: absolute;
+    width: 40%;
+    top: 30%;
+    left: 30%;
+    right: 20%;
+}
+
+
+/*Modales*/
+
+.fix-modal {
+    width: 80%;
+    height: 70%;
+    min-height: 0;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 20%;
+}
+
+.modal-backdrop,
+.modal-backdrop-bg {
+    background-color: rgba(000, 000, 000, 0.1);
+    transition: all 0.5s ease;
+}
+
+
+/*==========================Colors=====================*/
+
+
+/*background sliders*/
+
+.slider-slides {
+    background-color: #7986CB;
+}
+
+.background-none {
+    background: transparent!important;
+}
+
+.background-amber {
+    background-color: #FF6F00!important;
+}
+
+.background-amber-icon {
+    background-color: #ffa000!important;
+}
+
+.color-amber {
+    color: #FF6F00!important;
+}
+
+.color-amber-icon {
+    color: #ffa000!important;
+}
+
+
+/*button back header*/
+
+ion-header-bar button {
+    color: whitesmoke!important;
+}
+
+.prom-high {
+    background-color: #33691E;
+}
+
+.prom-basic {
+    background-color: #FFAB00;
+}
+
+.prom-low {
+    background-color: #D50000;
+}
+
+
+/*Mensajes sin leer*/
+
+.badge-indigo {
+    background-color: #FB8C00;
+    color: #fff;
+}
+
+.color-white,
+.title {
+    color: whitesmoke!important;
+}
+
+
+/*boton activo*/
+
+.background-amber-icon .button.active,
+.button.activated {
+    border-color: #FFD54F!important;
+    background-color: #FFD54F!important;
+}
+
+.indigo-500 .button.active,
+.button.activated {
+    border-color: #7986CB!important;
+    background-color: #7986CB!important;
+}
+
+
+/*Placeholder blancos*/
+
+.color-white::-webkit-input-placeholder {
+    color: whitesmoke;
+    opacity: 0.4;
+}
+
+.color-white:-moz-placeholder {
+    color: whitesmoke;
+    opacity: 0.4;
+}
+
+.color-white::-moz-placeholder {
+    color: whitesmoke;
+    opacity: 0.4;
+}
+
+.color-white:-ms-input-placeholder {
+    color: whitesmoke;
+    opacity: 0.4;
+}
+
+
+/*color header*/
+
+ion-header-bar {
+    background-color: #3F51B5!important;
+}
+
+.indigo-50 {
+    background-color: #E8EAF6;
+}
+
+.indigo-100 {
+    background-color: #C5CAE9;
+}
+
+.indigo-200 {
+    background-color: #9FA8DA;
+}
+
+.indigo-300 {
+    background-color: #7986CB;
+}
+
+.indigo-400 {
+    background-color: #5C6BC0;
+}
+
+.indigo-500 {
+    background-color: #3F51B5;
+}
+
+.indigo-600 {
+    background-color: #3949AB;
+}
+
+.indigo-700 {
+    background-color: #303F9F;
+}
+
+.indigo-800 {
+    background-color: #283593;
+}
+
+.indigo-900 {
+    background-color: #1A237E;
+}
+
+.indigo-A100 {
+    background-color: #8C9EFF;
+}
+
+.indigo-A200 {
+    background-color: #536DFE;
+}
+
+.indigo-A400 {
+    background-color: #3D5AFE;
+}
+
+.indigo-A700 {
+    background-color: #304FFE;
+}
+
+.indigo-500-text {
+    color: #3F51B5!important;
+}
+
+
+/*Burbuja de chat*/
+
+.chat-globo {
+    width: 90%;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #555;
+    color: black;
+    position: relative;
+}
+
+.chat-hour {
+    font-size: 9px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.chat-name {
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+
+.chat-other {
+    background-color: #E8EAF6;
+}
+
+.chat-other:before {
+    content: "";
+    width: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 5px 10px 5px 5px;
+    border-color: transparent #E8EAF6 transparent transparent;
+    left: -14px;
+    bottom: 2px;
+}
+
+.chat-mine {
+    background-color: #C5CAE9;
+}
+
+.chat-mine:before {
+    content: "";
+    width: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 5px 5px 5px 10px;
+    border-color: transparent transparent transparent #C5CAE9;
+    right: -14px;
+    bottom: 2px;
+}
+
+.chat-professor {
+    box-shadow: 0 2px 5px #555;
+    background-color: #9FA8DA;
+}
+
+.chat-professor:before {
+    content: "";
+    width: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 15px 5px 5px 5px;
+    border-color: #9FA8DA #9FA8DA transparent #9FA8DA;
+    top: 90%;
+    left: 50%
+}
+
+
+/*=======================animations================*/
+
+
+/*efecto notificación*/
+
+@keyframes toastIn {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+    50% {
+        bottom: 50px;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        bottom: 50px;
+        transform: scale(1);
+    }
+}
+
+
+/* animation modal in*/
+
+.slide-in-top {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+}
+
+.slide-in-top.ng-enter,
+.slide-in-top > .ng-enter {
+    -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 2000ms;
+    transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 2000ms;
+}
+
+.slide-in-top.ng-enter-active,
+.slide-in-top > .ng-enter-active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slide-in-top.ng-leave,
+.slide-in-top > .ng-leave {
+    -webkit-transition: all ease-in-out 500ms;
+    transition: all ease-in-out 500ms;
+}
+
+
+/* animation end */

@@ -1,0 +1,12 @@
+<!--Copyright (c) <2016> <Yeison Gomez Rodriguez, Brayan Stiven Tovar Claros>-->
+<ion-view view-title="Materias">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item item-icon-left background-none active-subject height-subjects fix-badge-subject font-size-large" ng-repeat="subject in subjects track by $index" ng-href="#/{{subject.id}}/wall">
+                <div class="circle background-amber-icon text-circle-subjects color-white">{{subject.name.substring(0, 2).toUpperCase()}}
+                </div>
+                <span class="overflow-hidden text-trunc indigo-500-text">&nbsp;{{subject.name}}</span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

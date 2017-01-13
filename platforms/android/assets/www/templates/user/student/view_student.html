@@ -1,0 +1,33 @@
+<!--Copyright (c) <2016> <Yeison Gomez Rodriguez, Brayan Stiven Tovar Claros>-->
+<ion-content scroll="true" has-bouncing="true">
+    <img ng-if="isConnectionDB" src="img/conection-error.png" alt="No hay conexión." style="position: fixed; width:100%; top: -120px; z-index: 3;">
+    <div ng-if="!isConnectionDB" ng-repeat="chat in conversationStudent | orderBy: '-time'" class="chat-globo {{chat.class}} margin-5-pc width-90-pc">
+        {{chat.message}}
+        <div class="chat-hour">
+            {{chat.time | date: 'MMMM/dd h:mm a'}}
+        </div>
+        <div class="chat-name">
+            {{chat.user_name}}
+        </div>
+    </div>
+    <div ng-if="!isConnectionDB && conversationStudent.length < 10" class="chat-globo chat-professor margin-5-pc pos-end width-90-pc">
+        Bienvenidos este es el canal de comunicación para los estudiante
+        <div class="chat-name">
+            Prego
+        </div>
+    </div>
+    <div class="width-all" ng-if="mostConversationStudent && conversationStudent.length >= 10 && isNetWork()">
+        <button ng-click="mostMessagesStudent()" class="button-full button-icon icon ion-more more-button"></button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</ion-content>
+<div class="bar bar-footer fix-border-footer footer-slide-down indigo-600">
+    <label class="item item-input chat-border-round indigo-50 border-none width-85-pc chat-input">
+        <input id="student" ng-init="messages=''" type="text" placeholder="Escribe tu mensaje" ng-model="messages">
+    </label>
+    <a class="button color-amber-icon button-icon icon ion-paper-airplane pull-right" ng-click="sendMessage(messages, 'student'); messages = ''"></a>
+</div>

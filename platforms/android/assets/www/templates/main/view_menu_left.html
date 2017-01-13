@@ -1,0 +1,39 @@
+<ion-side-menu side="left">
+    <ion-content>
+        <!-- Mini perfil usuario -->
+        <div>
+            <a class="item indigo-500">
+                <!--<img src="/img/chola.jpg"> -->
+                <h2 class="color-white text-no-trunc">{{user.name}}</h2>
+                <p class="color-white">{{user.program}}</p>
+            </a>
+        </div>
+        <!-- ================ -->
+        <!-- MOdal Promedio-->
+        <ion-list>
+            <ion-item menu-close class="background-none color-icon-card item item-icon-left indigo-500-text" ui-sref="main.subjects"> <i class="icon ion-clipboard color-amber"></i>Materias</ion-item>
+            <!--<ion-item class="background-none item item-icon-left indigo-500-text" ng-click="activeUpdate(viewUpdate)" ng-if="!viewUpdate"> <i class="icon ion-loop color-amber"></i>Actualizar materias</ion-item>-->
+            <div class="item item-divider text-center style-log-out" ng-if="viewUpdate">
+                Esto podria tardar un rato.
+                <br> ¿Estás seguro?
+            </div>
+            <div class="button-bar style-log-out" ng-if="viewUpdate">
+                <a class="border-none button button-outline button-balanced icon ion-checkmark-round" ng-click="updateSubjects()"></a>
+                <a class="border-none button button-outline button-assertive icon ion-close-round" ng-click="activeUpdate(viewUpdate)"></a>
+            </div>
+            <ion-item class="background-none item item-icon-left indigo-500-text" href="" ng-click="activelogOut(viewlogOut)" ng-if="!viewlogOut"> <i class="icon ion-log-out color-amber"></i><span>Cerrar sesión</span>
+            </ion-item>
+            <div class="item item-divider text-center style-log-out" ng-if="viewlogOut">
+                ¿Estás seguro de irte?
+            </div>
+            <div class="button-bar style-log-out" ng-if="viewlogOut">
+                <a class="border-none button button-outline button-balanced icon ion-checkmark-round" ng-click="logout()"></a>
+                <a class="border-none button button-outline button-assertive icon ion-close-round" ng-click="activelogOut(viewlogOut)"></a>
+            </div>
+            <div class="divider"> </div>
+        </ion-list>
+        <img ng-click="openConfig($event)" src="img/LogoUA.svg" class="style-logo-ua">
+        <p class="cursive text-center style-text-ua width-all">Construimos nación desde nuestra
+            <br>estratégica región</p>
+    </ion-content>
+</ion-side-menu>

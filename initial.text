@@ -1,0 +1,10 @@
+cordova plugin add cordova-sqlite-storage@0.7.14
+ionic plugin add https://github.com/apache/cordova-plugin-whitelist.git
+cordova plugin add ionic-plugin-keyboard
+cordova plugin add cordova-plugin-network-information
+ionic plugin add cordova-plugin-crosswalk-webview
+
+sudo bower install ngCordova --save --allow-root
+
+//config.xml Quitar cuando salga a produccion
+<allow-navigation href="*" />

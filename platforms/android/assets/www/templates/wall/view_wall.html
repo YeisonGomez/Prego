@@ -1,0 +1,53 @@
+<!--Copyright (c) <2016> <Yeison Gomez Rodriguez, Brayan Stiven Tovar Claros>-->
+<ion-view view-title="{{nameSubject()}}">
+    <ion-content scroll="false">
+        <ion-slide-box slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs delegate-handle="tabsWall">
+            <!--muro principal-->
+            <ion-slide ion-slide-tab-label="<i class='icon ion-university font-size-200-pc'></i>">
+                <ion-content scroll="true" has-bouncing="true">
+                    <img ng-if="isConnectionDB" src="img/conection-error.png" alt="No hay conexión." style="position: absolute; width:100%; top: -120px; z-index: 3;">
+                    <div ng-if="!isConnectionDB" ng-repeat="chat in conversation | orderBy: '-time'" class="chat-globo {{chat.class}} margin-5-pc pos-end width-90-pc">
+                        {{chat.message}}
+                        <div class="chat-hour">
+                            {{chat.time | date: 'MMMM/dd h:mm a'}}
+                        </div>
+                        <div class="chat-name">
+                            {{chat.user_name}}
+                        </div>
+                    </div>
+                    <div ng-if="!isConnectionDB && conversation.length < 10" class="chat-globo chat-professor margin-5-pc pos-end width-90-pc">
+                        Bienvenidos este es el canal de comunicación para el docente y el estudiante
+                        <div class="chat-name">
+                            Prego
+                        </div>
+                    </div>
+                    <div class="width-all" ng-if="mostConversation && conversation.length >= 10 && isNetWork()">
+                        <button ng-click="mostMessage('chateacher')" class="button-full button-icon icon ion-more more-button"></button>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="bar indigo-200 text-center input-advice">
+                        Este mensaje será visto por el docente y todos tus compañeros.
+                    </div>
+                </ion-content>
+                <div class="bar bar-footer fix-border-footer footer-slide-down indigo-600">
+                    <label class="item item-input chat-border-round indigo-50 border-none width-85-pc chat-input">
+                        <input id="teacher" ng-init="message=''" type="text" placeholder="Escribe tu mensaje" ng-model="message">
+                    </label>
+                    <a class="button color-amber-icon button-icon icon ion-paper-airplane pull-right" ng-click="sendMessage(message, 'teacher'); message = ''"></a>
+                </div>
+            </ion-slide>
+            <!--integrantes grupo DOCENTE-->
+            <ion-slide ion-slide-tab-label="<i class='icon ion-android-people font-size-200-pc'></i>">
+                <div ng-include src="'templates/user/teacher/view_list_student.html'"></div>
+            </ion-slide>
+            <!--integrantes grupo ESTUDIANTE-->
+            <ion-slide ng-show="viewChatStudent" ion-slide-tab-label="<i class='icon ion-android-contacts font-size-200-pc'></i>" ng-controller="studentCtrl">
+                <div ng-include src="'templates/user/student/view_student.html'"></div>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+</ion-view>

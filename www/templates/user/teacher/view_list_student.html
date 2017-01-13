@@ -1,0 +1,33 @@
+<ion-content scroll="true" has-bouncing="true" ng-controller="listStudentCtrl">
+    <div class="bar bar-header indigo-500 item-input-inset" ng-if="user.rol == 'Docente'">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios-copy-outline placeholder-icon"></i>
+            <input type="search" placeholder="Agrega una actividad" ng-model="n.nameActivity">
+        </label>
+    </div>
+    <img ng-if="isConnectionDBStudent" src="img/conection-error.png" alt="No hay conexión." style="position: absolute; width:100%; top: -120px; z-index: 3;">
+    <ion-list ng-if="!isConnectionDBStudent">
+        <ion-item class="item item-icon-left background-none color-white border-left-none" ng-repeat="m in subjectNow() | orderBy: 'name'" ng-class="{ 'border-top-none': $first}" ng-if="m.rol != 'Docente'" ng-click="modalCalification(m, n.nameActivity)">
+            <i class="icon ion-person"></i> {{m.name}}
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+
+<!-- Modal estudent-->
+<script id="studentActivity" type="text/ng-template">
+    <ion-modal-view class="fix-modal modal-border-round">
+        <ion-header-bar>
+            <h1 class="title">Actividades</h1>
+        </ion-header-bar>
+        <ion-content>
+            <ion-item class="item indigo-500-text padding-text-badge" ng-repeat="student in students">
+                <span class="trunc-text">{{student.name}}</span>
+                <span class="badge color-white" ng-class="{ 'prom-high': student.grade>=4, 'prom-basic': student.grade>=3&&student.grade<4, 'prom-low': student.grade<3 }">
+            <i class="icon ion-alert-circled indigo-500-text" ng-if="student.grade=='SN'"></i>
+            <span ng-if="student.grade!='SN'">{{student.grade}}</span> 
+                </span>
+            </ion-item>
+        </ion-content>
+    </ion-modal-view>
+</script>

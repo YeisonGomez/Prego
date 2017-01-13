@@ -1,0 +1,45 @@
+<ion-side-menu side="right" is-enabled="!isWall()">
+    <ion-content>
+        <ion-item class="item item-icon-left border-none indigo-500 color-white" ng-if="user.rol != 'Docente' && isNetWork()"> <i class="icon ion-ios-glasses-outline color-amber-icon"></i>
+            <h2 class="color-white">
+                <div>{{teachers}}</div>
+            </h2>
+            <p class="color-white">Docente</p>
+        </ion-item>
+        <!-- Promedio General -->
+        <div ng-if="user.rol != 'Docente' && isNetWork()" class="divider" style="border-bottom: 2px solid lightgray;"> </div>
+        <div class="border-promedio indigo-500">
+            <div ng-if="user.rol != 'Docente'" class="circle-promedio indigo-500-text display-table">
+                {{promedyAll()}}
+            </div>
+            <div ng-if="user.rol == 'Docente'" class="circle-promedio indigo-500-text display-table">
+                {{lengthStudents()}}
+            </div>
+            <div ng-if="user.rol == 'Docente'" class="color-white text-promedio display-table">Total de estudiantes
+                <br>Registrados</div>
+            <div ng-if="user.rol != 'Docente'" class="color-white text-promedio display-table">Promedio
+                <br>General</div>
+        </div>
+        <div class="item item-divider indigo-500-text">
+            Actividades
+        </div>
+        <ion-item ng-if="grades.length < 1" class="item item-icon-left indigo-500-text">
+            <i class="icon ion-android-clipboard"></i>
+            <span>No hay actividades</span>
+        </ion-item>
+        <!--Actividades del estudiante-->
+        <ion-item ng-if="user.rol != 'Docente'" class="item item-icon-left indigo-500-text padding-text-badge" ng-repeat="activity in grades">
+            <i class="icon ion-clipboard"></i>
+            <span class="trunc-text">{{activity.nameActivity}}</span>
+            <span class="badge color-white" ng-class="{ 'prom-high': activity.grade>=4, 'prom-basic': activity.grade>=3&&activity.grade<4, 'prom-low': activity.grade<3 }">
+                        {{activity.grade}}
+                    </span>
+        </ion-item>
+        <!--Actividades del docente-->
+        <ion-item ng-if="user.rol == 'Docente'" class="item item-icon-left indigo-500-text padding-text-badge" ng-repeat="activity in grades" ng-click="modalStudentsActivitys(activity)">
+            <i class="icon ion-clipboard"></i>
+            <span class="trunc-text">{{activity.nameActivity}}</span>
+            <span class="trunc-text">{{activity.student_name}}</span>
+            </ion-list>
+    </ion-content>
+</ion-side-menu>

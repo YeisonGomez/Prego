@@ -1,0 +1,56 @@
+<!--Copyright (c) <2016> <Yeison Gomez Rodriguez, Brayan Stiven Tovar Claros>-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!--quitar en produccion-->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-eval' 'unsafe-inline'">
+    <!-- =============================-->
+    <title></title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/slidingTabs.css" rel="stylesheet">
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.0.2/firebase.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="lib/ng-cordova-oauth/dist/ng-cordova-oauth.js"></script>
+    <script src="lib/satellizer/dist/satellizer.min.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="lib/angular-locale.js"></script>
+</head>
+
+<body ng-app="prego" ng-controller="appCtrl" ng-cloak class="platform-android platform-cordova platform-webview">
+    <ion-nav-view></ion-nav-view>
+    <div ng-if="loadingState" class="style-loader">
+        <img src="img/loaderPrego.gif">
+    </div>
+    <div ng-if="notification" class="text-center color-white style-toast border-round toast-anim">
+        {{messageNotification}}
+    </div>
+</body>
+
+<!-- me app's js -->
+<script src="js/app.js"></script>
+<script src="js/run.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/directives/http_timeout.js"></script>
+<!--Controllers-->
+<script src="js/main/controller_main.js"></script>
+<script src="js/subjects/controller_subjects.js"></script>
+<script src="js/wall/controller_wall.js"></script>
+<script src="js/user/login/controller_login.js"></script>
+<script src="js/user/student/controller_student.js"></script>
+<script src="js/user/teacher/controller_list_student.js"></script>
+<!--Services-->
+<script src="js/subjects/service_subjects.js"></script>
+<script src="js/wall/service_wall.js"></script>
+<script src="js/user/student/service_student.js"></script>
+<script src="js/user/teacher/service_list_student.js"></script>
+<!--Directives-->
+<script src="js/directives/slidingTabsDirective.js"></script>
+
+</html>
